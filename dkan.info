@@ -124,3 +124,7 @@ dependencies[] = dkan_datastore
 dependencies[] = dkan_datastore_api
 dependencies[] = open_data_schema_map_dkan
 dependencies[] = visualization_entity_charts_dkan
+
+; Additional NDI modules and themes
+dependencies[] = hierarchical_select
+dependencies[] = elections

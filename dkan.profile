@@ -12,6 +12,9 @@ function dkan_install_tasks() {
   $tasks['dkan_additional_setup'] = array(
     'display_name' => 'Cleanup',
   );
+  $tasks['ndi_custom_setup'] = array(
+    'display_name' => 'Custom NDI tasks',
+  );
   return $tasks;
 }
 
@@ -69,4 +72,11 @@ function dkan_additional_setup() {
   $file = colorizer_update_stylesheet($theme_key, $theme_key, $palette);
   clearstatcache();
   dkan_default_content_base_install();
+}
+
+function ndi_custom_setup() {
+  $enable = array(
+    'theme_default' => 'ndi_dkan',
+  );
+  theme_enable($enable);  
 }
