@@ -5,7 +5,7 @@ projects[hierarchical_select][subdir] = contrib
 
 projects[elections][type] = module
 projects[elections][download][type] = git
-projects[elections][download][url] = https://github.com/nditech/elections.git
+projects[elections][download][url] = https://github.com/nditech/elections_module.git
 projects[elections][download][branch] = master
 projects[elections][subdir] = ndi
 

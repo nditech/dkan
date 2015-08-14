@@ -127,4 +127,4 @@ dependencies[] = visualization_entity_charts_dkan
 
 ; Additional NDI modules and themes
 dependencies[] = hierarchical_select
-dependencies[] = elections
+dependencies[] = elections_module
