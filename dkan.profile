@@ -75,8 +75,7 @@ function dkan_additional_setup() {
 }
 
 function ndi_custom_setup() {
-  $enable = array(
-    'theme_default' => 'ndi_dkan',
-  );
-  theme_enable($enable);  
+  theme_enable(array('ndi_dkan'));  
+
+  variable_set('theme_default', 'ndi_dkan');
 }
