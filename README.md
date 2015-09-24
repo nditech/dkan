@@ -45,64 +45,64 @@ Individual instructions will vary based on your version of Linux. The following 
 
 1.Become the root user.
 
-sudo su
+		sudo su
 
 2.Configure the /etc/httpd/conf/httpd.conf file to point to your will-be data warehouse. The httpd.conf file is the main configuration file for the Apache web server.
 
-vim /etc/httpd/conf/httpd.conf
+		vim /etc/httpd/conf/httpd.conf
 	
-Here, change document root to :  /var/www/html/website_name
+		Here, change document root to :  /var/www/html/website_name
 
-Eg: /var/www/html/dkan
-
-Add line at the bottom:
-<Directory "/var/www/html/dkan" >
-AllowOverride All
-</Directory>
+		Eg: /var/www/html/dkan
+	
+		Add line at the bottom:
+		<Directory "/var/www/html/dkan" >
+		AllowOverride All
+		</Directory>
 
 3.We need to create a directory named after our website that matches document root previously set in the Apache configuration.
 
-mkdir /var/www/html/dkan
+		mkdir /var/www/html/dkan
 
 4.Restart the web server to apply the changes. The restart option is a shorthand way of stopping and then starting the Apache HTTP Server.
 
-service httpd restart
+		service httpd restart
 
 5.Now, go to current working directory to the file we just created. We will install drupal here.
 
-cd /var/www/html/dkan/
+		cd /var/www/html/dkan/
 
 6.Download the latest version of DKAN from the NuCivic web site using “wget”. Adjust the wget command below to reflect the current version shared here: http://docs.getdkan.com/dkan-documentation/dkan-developers-guide/installing-dkan 
 
-wget https://github.com/nuams/dkan-drops-7/archive/7.x-1.0.zip
+		wget https://github.com/nuams/dkan-drops-7/archive/7.x-1.0.zip
 
 7.Unzip the downloaded file.
 
-unzip 7.x-1.0.zip
+		unzip 7.x-1.0.zip
 
 8.To grant permissions. Go to the following directory.
 
-cd /var/www/html
+		cd /var/www/html
 
-chown -Rv apache:apache dkan 
+		chown -Rv apache:apache dkan 
 
 9.Notice that we now have a 7.x-1.0.zip directory to work with. We want the DKAN files to be in our document root, not in a 'dkan-drops-7-7.x-1.0' subdirectory. So, we'll move the contents of the directory up one level.
 		
-cd dkan
+		cd dkan
 
-mv dkan-drops-7-7.x-1.0/* ./
+		mv dkan-drops-7-7.x-1.0/* ./
 
-mv dkan-drops-7-7.x-1.0/.htaccess ./
+		mv dkan-drops-7-7.x-1.0/.htaccess ./
 
 10.Remove the now-empty directory
 
-ls -lah dkan-drops-7-7.x-1.0
+		ls -lah dkan-drops-7-7.x-1.0
 
-rm -rf dkan-drops-7-7.x-1.0
+		rm -rf dkan-drops-7-7.x-1.0
 
 11.Go to your website. DKAN has hopefully been successfully installed.
 
-https://(your-website)
+		https://(your-website)
 
 12.In your website, Choose the language as English. Click on Save and continue. 
 
@@ -110,31 +110,31 @@ https://(your-website)
 	
 **To create a new user.
 
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+		CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 
 **To grant access to the new user.
-		
-GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+	
+		GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 **Once you have granted access, make sure to reload all the privileges.
 
-FLUSH PRIVILEGES; 
+		FLUSH PRIVILEGES; 
 
 **To access your MySQL Database.
 
-mysql -u {mysql-user} -p {mysql-password}
+		mysql -u {mysql-user} -p {mysql-password}
 
 **To show the existing databases.
 
-SHOW DATABASES;
+		SHOW DATABASES;
 
 **To create a new database.
 		
-CREATE DATABASE {name};
+		CREATE DATABASE {name};
 
 **To use the new database.
 		
-USE {new database name}
+		USE {new database name}
 
 
 14.Configure the site with the correct site information and the correct site maintenance account. Click on Save and continue
@@ -147,7 +147,7 @@ USE {new database name}
 
 18.From the toolbar:
 
-Appearance ==>Install new theme.
+		Appearance ==>Install new theme.
 
 19.Choose the .zip file saved on your computer. Click on the Install button.
 
