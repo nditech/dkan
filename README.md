@@ -44,7 +44,7 @@ You will need a Linux server, comfort working with Linux/Apache/MySQL/PHP (LAMP)
 Individual instructions will vary based on your version of Linux. The following instructions were written for Ubuntu Linux.
 
 1.Become the root user.
-    sudo su
+sudo su
 
 2.Configure the /etc/httpd/conf/httpd.conf file to point to your will-be data warehouse. The httpd.conf file is the main configuration file for the Apache web server.
 		vim /etc/httpd/conf/httpd.conf
