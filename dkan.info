@@ -130,3 +130,8 @@ dependencies[] = hierarchical_select
 dependencies[] = elections_module
 dependencies[] = quicktabs
 dependencies[] = better_exposed_filters
+
+; Additional NDI Features
+dependencies[] = ndi_dkan_question_topics
+dependencies[] = ndi_language_switcher
+dependencies[] = ndi_dkan_languages

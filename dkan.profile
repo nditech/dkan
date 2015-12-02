@@ -78,4 +78,16 @@ function ndi_custom_setup() {
   theme_enable(array('ndi_dkan'));  
 
   variable_set('theme_default', 'ndi_dkan');
+  variable_set('site_name', 'DKAN | English');
+
+  $ndi_features = array(
+    'ndi_dkan_languages',
+    'ndi_language_switcher',
+    'ndi_dkan_question_topics',
+  );
+  // Revert all components of NDI Features.
+  foreach ($ndi_features as $feature) {
+    $info = drupal_parse_info_file(drupal_get_path('module', $feature) . '/' . $feature . '.info');
+    features_revert(array($feature => array_keys($info['features'])));
+  }
 }
