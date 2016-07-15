@@ -44,6 +44,7 @@ function dkan_additional_setup() {
       array('dkan_group_link_delete', array()),
       array('dkan_install_default_content', array()),
       array('dkan_set_adminrole', array()),
+      array('demtools_dkan_config', array()),
     ),
   );
 }
