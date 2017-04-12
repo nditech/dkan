@@ -81,6 +81,7 @@ function dkan_additional_setup() {
       array('dkan_set_roleassign_roles', array()),
       array('dkan_set_bueditor_excludes', array()),
       array('dkan_post_install', array()),
+      array('demtools_dkan_config', array()),
     ),
   );
 }

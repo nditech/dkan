@@ -3,6 +3,9 @@ description = DKAN Open Data Portal
 core = 7.x
 exclusive = TRUE
 
+; NDI DemTools (http://dem.tools/dkan)
+dependencies[] = demtools_dkan
+
 ; Core
 dependencies[] = block
 dependencies[] = dblog
